@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="UiGuidelineUnitSelection.Pages.UnitEnhancement.UnitDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:l="clr-namespace:UiGuidelineUnitSelection"
+    Title="ユニット詳細" Width="308">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CloseButton" Content="閉じる" />
+
+        <Image Source="{Binding Master.ImageId, Converter={x:Static l:App.ImageConverter}}" Width="130" Height="130" Grid.Row="1" />
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Text="{Binding Master.Name}" />
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Level: " />
+                <TextBlock Text="{Binding Level}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="HP　: " />
+                <TextBlock Text="{Binding Hp}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="MP　: " />
+                <TextBlock Text="{Binding Mp}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="力　: " />
+                <TextBlock Text="{Binding Strength}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="魔力: " />
+                <TextBlock Text="{Binding Magic}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="守　: " />
+                <TextBlock Text="{Binding Defence}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="速　: " />
+                <TextBlock Text="{Binding Agility}" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

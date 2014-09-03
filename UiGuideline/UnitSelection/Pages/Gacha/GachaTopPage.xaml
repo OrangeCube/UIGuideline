@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="UiGuidelineUnitSelection.Pages.Gacha.GachaTopPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:UiGuidelineUnitSelection.Pages.Gacha"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300"
+    Title="ガチャトップ">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="ガチャ" Style="{StaticResource HeaderStyle}" />
+
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="ReturnButton" Content="戻る" />
+                <Button x:Name="NormalGacha" Content="無料ガチャ" ToolTip="ダミー。実際にはガチャポイントみたいなのないので、こっちは「1体引けるガチャ」" />
+                <Button x:Name="PremiumGacha" Content="課金ガチャ" ToolTip="ダミー。課金ポイントも当然ないので、こっちは「5体引けるガチャ」" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

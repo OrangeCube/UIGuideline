@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="UiGuidelineUnitSelection.Pages.UnitEnhancement.EnhancementPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300"
+    Title="合成">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <TextBlock Text="合成確認" Style="{StaticResource HeaderStyle}" />
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="OkButton" Content="実行" />
+                    <Button x:Name="CancelButton" Content="キャンセル" />
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock Text="ベース" />
+            <ContentControl Content="{Binding BaseUnit}" ContentTemplate="{StaticResource UnitTemplate}" />
+
+            <TextBlock Text="素材" />
+            <ItemsControl ItemsSource="{Binding MaterialUnits}" ItemTemplate="{StaticResource UnitTemplate}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
+    </Grid>
+</Page>
